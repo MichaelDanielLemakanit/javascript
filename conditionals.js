@@ -113,13 +113,13 @@
 
 // Write a js program that checks if a variable student_score is greater than 90. If true, check if the attendance is greater than 80. If both conditions are true, display"Excellent student", otherwise display "Good score, but attendance needs improvement"
 
-const student_score = Number(prompt("Enter student score: "));
-const attendance = Number(prompt("Enter student attendance: "));
+// const student_score = Number(prompt("Enter student score: "));
+// const attendance = Number(prompt("Enter student attendance: "));
 
-if (student_score > 90 && attendance > 80) {
-    console.log("Excellent student");
-} else if (student_score > 90 && attendance <= 80) {
-    console.log("Good score, but attendance needs improvement");
-} else {
-    console.log("Score does not meet the excellent threshold.");
-}
+// if (student_score > 90 && attendance > 80) {
+//     console.log("Excellent student");
+// } else if (student_score > 90 && attendance <= 80) {
+//     console.log("Good score, but attendance needs improvement");
+// } else {
+//     console.log("Score does not meet the excellent threshold.");
+// }
