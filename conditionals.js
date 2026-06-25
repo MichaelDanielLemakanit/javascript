@@ -65,13 +65,13 @@
 
 // Create a variable called year and enter the a random year. Check if the year is a leap year or not. A leap year is a year that is divisible by 4  not divisible by 100 or divisible  by 400.
 
-// const year = Number(prompt("Enter any Year: "))
+const year = Number(prompt("Enter any Year: "))
 
-// if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-//     console.log(`${year} is a leap year.`);
-// } else {
-//     console.log(`${year} is not a leap year.`);
-// }
+if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    console.log(`${year} is a leap year.`);
+} else {
+    console.log(`${year} is not a leap year.`);
+}
 
 
 // Take as input from a user the temperature if the temperature is above 30°C display “The temperature is too high”,if the temperature   is above 15 display “Normal temperature” otherwise display “Cold temperature”
@@ -88,7 +88,7 @@
 //     console.log("cold Temperature")
 // }
 
-// Write a js program that checks if a variable x is between 10 and 20 (inclusive) and if another variable y is greater than 100. If both conditions are true, display"Conditions met", otherwise display"Conditions not met"
+//5.  Write a js program that checks if a variable x is between 10 and 20 (inclusive) and if another variable y is greater than 100. If both conditions are true, display"Conditions met", otherwise display"Conditions not met"
 
 // const x = Number(prompt("Enter Number: "))
 // const y = Number(prompt("Enter Number: "))
