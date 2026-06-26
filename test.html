@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    .progress - container {
+        width: 300px;
+        background - color: #ddd;
+        border - radius: 5px;
+    }
+
+    #progress - bar {
+        width: 0 %; /* Starts at 0 width */
+        height: 30px;
+        background - color: #04AA6D;
+        text - align: center;
+        line - height: 30px;
+        color: white;
+        border - radius: 5px;
+    }
+</script>
+
+<body>
+    <div class="progress-container">
+        <div id="progress-bar">0%</div>
+    </div>
+
+
+
+
+    <!-- <script>
+        
+
+
+
+
+
+        let width = 0;
+        // setInterval acts as our "timed loop"
+        let loadingLoop = setInterval(frame, 20); // Runs the 'frame' function every 20ms
+
+        function frame() {
+            if (width >= 100) {
+                clearInterval(loadingLoop); // Stops the loop when we reach 100%
+            } else {
+                width++; // Increment the loading progress
+                const progressBar = document.getElementById("progress-bar");
+                progressBar.style.width = width + "%";
+                progressBar.innerHTML = width + "%";
+            }
+        }
+    </script> -->
+</body>
+
+</html>

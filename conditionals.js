@@ -123,3 +123,21 @@ if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
 // } else {
 //     console.log("Score does not meet the excellent threshold.");
 // }
+
+let num = 987;
+
+let numStr = num.toString();
+let numSeq = [];
+for (let i = 0; i < numStr.length; i++) {
+    numSeq.push(numStr[i]);
+}
+
+let reversedArray = [];
+
+for (let i = numSeq.length - 1; i >= 0; i--) {
+    reversedArray.push(numSeq[i]); 
+}
+
+let reversedNum = parseInt(reversedArray.join(""));
+
+console.log(reversedNum);
