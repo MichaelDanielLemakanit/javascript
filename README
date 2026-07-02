@@ -107,3 +107,19 @@ Parameters vs Arguments parameter - a placeholder value / variable used in place
 N/B -> The order and number of parameters matches the no and order of arguments
 
 Functions Task on slide 83 -> intermediate questions do the following: 1,2,4,7 -> using functions
+
+
+
+parseFloat() -> converts a value to a floating point number parseInt() -> converts a value to a whole number
+
+Goal: take user input through forms and display outputs in a table
+
+1.A user is provided with a form to fill in their basic salary and benefits 2.User fills the form and submits it 3.On submission JS is triggered to compute the various tax values of each category 4.The values are then displayed in a table
+
+JS has 2 primary functions: 1.User interactivity -> user is allowed to interact with the application 2.Reactivity
+
+id attribute -> an attribute used by JS to uniquely identify and target a HTML element document.getElementByID() - a function used by JS to identify an element by its unique id attribute document.getElementByID().value -> used by JS to extract / access values from form elements document.getElementByID().innerText -> used by JS to access any other HTML element document.getElementByID().innerHTML -> used by JS to access any other HTML element
+
+event -> any action taken / done by a user when using an application e.g. click, scroll, submit a form , focus, zoom addEventListener() - a function that listens for specific events
+
+event.preventDefault() -> a function that prevents the default behaviour of the browser after an event occurs N/B: The default behaviour of the browser after an event occurs is to refresh

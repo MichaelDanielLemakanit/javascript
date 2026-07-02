@@ -15,3 +15,18 @@ function add_numbers(x,y){
 add_numbers(3,4) //function call
 add_numbers(100,200)
 add_numbers(50,200)
+
+let add = (a,b) =>{
+    return a + b
+}
+let sum4 = add(12,12)
+console.log(sum4)
+
+let add2 = (a,b) => a + b
+
+let double = x => x * 2
+
+
+const verifyEmail = (email) => {
+    return email.includes("@") && email.includes(".");
+};
