@@ -4,69 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>KRA Tax & Net Salary Calculator</title>
 </head>
 
-<body class="">
-    <div class="container">
-        <div>
-            <div class="d-flex justify-content-center bg-info">
-                <p>Tax Project</p>
-            </div>
+<body class="bg-light">
 
-            <!-- form -->
-            <div>
-                <form id="tax_form">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Basic Salary</label>
-                        <input type="number" class="form-control" id="basic" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Benefits</label>
-                        <input type="number" class="form-control" id="benefits">
-                    </div>
-                    <button type="submit" class="btn btn-success">Calculate Tax</button>
-                </form>
-            </div>
+    <div class="container py-4" style="max-width: 800px;">
+        
+        <!-- Header Banner Section -->
+        <div class="d-flex justify-content-center bg-primary text-white p-3 rounded shadow-sm mb-4">
+            <h4 class="mb-0 fw-bold"><i class="bi bi-calculator me-2"></i>KRA Payslip Tax Project</h4>
+        </div>
+        
+        <!-- Input Form Section -->
+        <div class="card shadow-sm border-0 p-4 mb-4 bg-white" style="border-radius: 12px;">
+            <form id="tax_form">
+                <div class="mb-3">
+                    <label for="basic" class="form-label fw-semibold text-muted">Basic Salary (Ksh.)</label>
+                    <input type="number" class="form-control form-control-lg" id="basic" placeholder="e.g. 50000" min="0" required>
+                </div>
+                <div class="mb-4">
+                    <label for="benefits" class="form-label fw-semibold text-muted">Benefits / Allowances (Ksh.)</label>
+                    <input type="number" class="form-control form-control-lg" id="benefits" placeholder="e.g. 10000" min="0">
+                </div>
 
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg fw-bold py-2.5">
+                        Calculate Net Salary Deductions
+                    </button>
+                </div>
+            </form>
+        </div>
 
-            <!-- table -->
-            <div class="container p-4">
-                <table class="table table-bordered">
-                    <thead>
+        <!-- Output Breakdown Display Grid Table -->
+        <div class="card shadow-sm border-0 p-4 bg-white" style="border-radius: 12px;">
+            <h5 class="fw-bold text-dark mb-3">Salary Breakdown Metrics</h5>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
                         <tr>
-                            <th scope="col">Tax Category</th>
-                            <th scope="col">Value (Ksh.)</th>
+                            <th scope="col" class="py-3">Task Category</th>
+                            <th scope="col" class="py-3 text-end">Value (Ksh.)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-bg-secondary">Gross Salary</td>
-                            <td id="gross"></td>
+                            <td class="fw-medium text-secondary">Gross Salary</td>
+                            <td id="gross" class="text-end fw-bold text-dark">0.00</td>
                         </tr>
                         <tr>
-                            <td class="bg-warning">NHIF</td>
-                            <td></td>
+                            <td class="text-secondary">NHIF Deduction</td>
+                            <td id="nhif" class="text-end fw-semibold text-danger">0.00</td>
                         </tr>
                         <tr>
-                            <td class="text-bg-primary">NSSF</td>
-                            <td></td>
+                            <td class="text-secondary">NSSF Contribution</td>
+                            <td id="nssf" class="text-end fw-semibold text-danger">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">NHDF (Housing Levy)</td>
+                            <td id="nhdf" class="text-end fw-semibold text-danger">0.00</td>
+                        </tr>
+                        <tr class="table-sm">
+                            <td class="text-muted small ps-3">Taxable Income Base</td>
+                            <td id="taxable" class="text-end text-muted small pe-2">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-secondary">PAYE (KRA Tax)</td>
+                            <td id="payee" class="text-end fw-semibold text-danger">0.00</td>
+                        </tr>
+                        <tr class="table-primary fs-5 border-top border-2">
+                            <td class="fw-bold text-primary">Net Salary Payout</td>
+                            <td id="net" class="text-end fw-bold text-primary">0.00</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
         </div>
-
-
-
-
     </div>
+
+    <!-- Corrected index.js source asset pipeline hook link -->
     <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    
+    <!-- Bootstrap Script Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
 </body>
 
